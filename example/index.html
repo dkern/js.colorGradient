@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>js.colorGradient</title>
+  <script type="text/javascript" src="../color.gradient.min.js"></script>
+  <style type="text/css">
+    h2 { margin-bottom: 0; }
+    h3 { margin-top: 0; }
+    .g { width: 2px; height: 15px; float: left; }
+    .e { height: 20px; margin-left: 20px; clear: both; }
+  </style>
+</head>
+
+<body>
+  <h1>js.colorGradient</h1>
+  <hr />
+
+  <h2>getHexColorAtPercent([0...100])</h2>
+  <h3>use result directly as hex color</h3>
+  <pre>
+    var gradient1 = new ColorGradient(["#fff", "#ff00ff", "000"]);
+    var hexString = gradient1.getHexColorAtPercent([0...100]);
+  </pre>
+  <div class="e">
+    <script type="text/javascript">
+      var gradient = new ColorGradient(["#fff", "#ff00ff", "000"]);
+      for( var i = 1; i <= 100; i++ ) document.write('<div class="g" style="background: ' + gradient.getHexColorAtPercent(i) + ';"></div>');
+    </script>
+  </div>
+
+  <h2>getColorAtPercent([0...100])</h2>
+  <h3>use result as r/b/g</h3>
+  <pre>
+    var gradient2 = new ColorGradient(["f00", "0f0", "00f", "ff0", "f0f", "0ff", "fff", "000"]);
+    var rgbArray = gradient2.getColorAtPercent([0...100]);
+  </pre>
+  <div class="e">
+    <script type="text/javascript">
+      var gradient = new ColorGradient(["f00", "0f0", "00f", "ff0", "f0f", "0ff", "fff", "000"]);
+      for( var i = 1; i <= 100; i++ )
+      {
+          var rgbArray = gradient.getColorAtPercent(i);
+          document.write('<div class="g" style="background: rgb(' + rgbArray[0] + ',' + rgbArray[1] + ',' + rgbArray[2] + ');"></div>');
+      }
+    </script>
+  </div>
+</body>
+</html>
