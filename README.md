@@ -3,7 +3,7 @@
 ---
 
 ## About
-This small javascript library calculates a gradient of multiple colors. The result and whole gradient can be accessed via percentage. The gradient will only be calculated one to save execution time.
+This small javascript library calculates a gradient of multiple colors. The result and whole gradient can be accessed via percentage. The gradient will only be calculated once to save execution time.
 
 ## Basic Usage
 1.) Include library:
