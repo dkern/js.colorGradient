@@ -8,7 +8,7 @@ This small javascript library calculates a gradient of multiple colors. The resu
 ## Basic Usage
 1.) Include library:
 ```HTML
-<script type="text/javascript" src="color.gradient..min.js"></script>
+<script type="text/javascript" src="color.gradient.min.js"></script>
 ```
 
 2.) Initialize by pass a color array for the gradient and read the values by percentage selector: 
